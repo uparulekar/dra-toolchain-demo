@@ -117,7 +117,7 @@ test:
 
 #Pager Duty
 alerting:
-  service_id: pagerduty
+  service_id: pagerduty2
   metadata: pagerduty.yml
   
 #Web IDE
