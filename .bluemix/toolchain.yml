@@ -106,13 +106,6 @@ orders-api-build:
     services: ["orders-api-repo", "test"]
   hidden: [form, description]
 
-#Deploy Risk Analytics
-dra:
-  service_id: draservicebroker
-  parameters:
-    criteria: "{\"name\": \"Unit Test Coverage\", \"stage\": \"unittest\", \"rules\": [{\"name\": \"Unit Test Checks\",\"format\": \"mocha\",\"stage\": \"unittest\",\"percentPass\": 100,\"regressionCheck\": true,\"criticalTests\": []},{\"name\": \"Coverage Test Checks\",\"format\": \"istanbul\",\"stage\": \"code\",\"codeCoverage\": 90,\"regressionCheck\": true}]}"
-    criteria: $file("dra-criteria.json")
-
 #Deployment Risk Analytics
 dra:
   service_id: draservicebroker
