@@ -113,20 +113,20 @@ dra:
     criteria: "{\"name\": \"Unit Test Coverage\", \"stage\": \"unittest\", \"rules\": [{\"name\": \"Unit Test Checks\",\"format\": \"mocha\",\"stage\": \"unittest\",\"percentPass\": 100,\"regressionCheck\": true,\"criticalTests\": []},{\"name\": \"Coverage Test Checks\",\"format\": \"istanbul\",\"stage\": \"code\",\"codeCoverage\": 90,\"regressionCheck\": true}]}"
     criteria: $file("dra-criteria.json")
 
-#Sauce Labs
-test:
-  service_id: saucelabs
-  include: saucelabs.yml
+#Deployment Risk Analytics
+dra:
+  service_id: draservicebroker
+  include: dra.yml
 
 #PagerDuty
 alerting:
   service_id: pagerduty
   include: pagerduty.yml
-  
+
 #Web IDE
 webide:
   service_id: orion
-  
+
 #Deployment
 deploy:
   schema: deploy.json
