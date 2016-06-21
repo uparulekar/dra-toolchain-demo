@@ -71,6 +71,8 @@ stages:
       cf push "${CF_APP_NAME}"
       # View logs
       #cf logs "${CF_APP_NAME}" --recent
+    enable_tests: true
+    test_file_pattern: '*.xml'
 - name: PROD
   inputs:
   - type: job
