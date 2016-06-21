@@ -58,7 +58,7 @@ ui-build:
         PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
       execute: true
     services: ["ui-repo", "test"]
-  hidden: [form, description]  
+  hidden: [form, description]
 
 catalog-api-build:
   service_id: pipeline
@@ -110,6 +110,11 @@ orders-api-build:
 dra:
   service_id: draservicebroker
   include: dra.yml
+
+#Sauce Labs
+test:
+  service_id: saucelabs
+  include: saucelabs.yml
 
 #PagerDuty
 alerting:
